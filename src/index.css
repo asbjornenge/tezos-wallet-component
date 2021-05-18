@@ -1,0 +1,114 @@
+.TezosWallet {
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-left: 10px;
+  position: relative;
+  background-color: white;
+}
+.TezosWallet.withmenu {
+  border-radius: 10px 10px 0px 0px;
+}
+.TezosWallet > div {
+  margin-right: 10px;
+}
+.TezosWallet .connectWalletText {
+  padding: 5px;
+  padding-left: 10px;
+}
+.TezosWallet .connectWalletIcon {
+  display: flex;
+}
+.TezosWallet .connectWalletIcon svg {
+  font-size: 0.9em;
+  padding: 5px;
+  margin-bottom: -1px;
+}
+.TezosWallet .spacer {
+  border-left: 1px solid black;
+  width: 1px;
+  height: 60%;
+}
+.TezosWallet .identityImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.TezosWallet .identityImage img {
+  width: 30px;
+}
+.TezosWalletMenu {
+  position: absolute;
+  z-index: 1000;
+  top: 40px;
+  right: -11px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.TezosWalletMenu > div {
+  display: flex;
+  justify-content: flex-end;
+}
+.TezosWalletMenu > div > div {
+  padding: 10px;
+}
+.TezosWalletMenu .label {
+  flex: auto;
+}
+.TezosWalletMenu .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .TezosWallet .address {
+    display: none;
+  }
+  .TezosWallet .connectWalletText {
+    display: none;
+  }
+  .TezosWalletMenu .label {
+    display: none;
+  }
+  .TezosWalletMenu .icon {
+    width: 100%;
+  }
+}
+@media (max-width: 420px) {
+  .TezosWallet .balance, .TezosWallet .spacer {
+    display: none;
+  }
+  .TezosWallet {
+    padding: 0;
+    border: 0;
+    background-color: inherit;
+  }
+  .TezosWallet .identityImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0;
+  }
+  .TezosWallet.withmenu .identityImage {
+    border-radius: 20px 20px 0px 0px;
+  }
+  .TezosWallet .identityImage img {
+    width: 40px;
+  }
+}
