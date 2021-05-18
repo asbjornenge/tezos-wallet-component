@@ -13,15 +13,43 @@ npm install --save tezos-wallet-component
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'tezos-wallet-component'
+import { 
+  TezosWallet,
+  TezosWalletMenuDisconnect 
+} from 'tezos-wallet-component'
 import 'tezos-wallet-component/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
+const App = () => {
+  const [showMenu, setShowMenu] = useState(false)
+  const [wallet, setWallet] = useState(null)
+
+  const mockWallet = {
+    address: 'tz1UZZnrre9H7KzAufFVm7ubuJh5cCfjGwam',
+    balance: 125000
   }
+
+  const handleConnectWallet = (selectedNetwork) => {
+    setWallet(mockWallet)
+  }
+
+  const handleDisconnectWallet = () => {
+    setWallet(null)
+    setShowMenu(false)
+  }
+
+  return (
+    <div>
+      <TezosWallet
+        address={wallet?.address}
+        balance={wallet?.balance}
+        showMenu={showMenu}
+        onToggleMenu={() => setShowMenu(!showMenu)}
+        onConnectWallet={handleConnectWallet}
+       >
+        <TezosWalletMenuDisconnect onClick={handleDisconnectWallet} />
+      </TezosWallet>
+    </div>
+  )
 }
 ```
 
