@@ -53,6 +53,8 @@ const App = () => {
 }
 ```
 
+![screenshot1](screenshots/NotConnected.png?raw=true "Screenshot1")
+
 ## License
 
 MIT © [asbjornenge](https://github.com/asbjornenge)
