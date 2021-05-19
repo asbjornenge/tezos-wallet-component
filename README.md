@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/tezos-wallet-component.svg)](https://www.npmjs.com/package/tezos-wallet-component) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-Tezos Wallet React Component aims to provide a responsive and flexible wallet component for Tezos dapps created using React. It is a pure UI component and does not bind to any particular wallet. All state and wallet interactions must be handles by the user. It aims to be modular and pluggable in how it handles menu items where components are passed as children.
+Tezos Wallet React Component aims to provide a responsive and flexible wallet component for Tezos dapps created using React. It is a pure UI component and does not bind to any particular wallet. All state and wallet interactions must be handled by the user. It aims to be modular and pluggable in how it handles menu items where components are passed as children.
 
 See example below.
 
