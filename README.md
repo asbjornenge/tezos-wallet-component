@@ -54,6 +54,8 @@ const App = () => {
 ```
 
 ![screenshot1](screenshots/NotConnected.png?raw=true "Screenshot1")
+![screenshot2](screenshots/Connected.png?raw=true "Screenshot2")
+![screenshot3](screenshots/WithMenu.png?raw=true "Screenshot3")
 
 ## License
 
