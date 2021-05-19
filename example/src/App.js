@@ -31,7 +31,7 @@ const App = () => {
         <div className="logo">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Tezos_logo.svg/1200px-Tezos_logo.svg.png" alt="logo" />
         </div>
-        <h1>Tezos Wallet Dapp</h1>
+        <h1>Dapp</h1>
         <div className="wallet">
           <TezosWallet
             address={wallet?.address}

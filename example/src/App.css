@@ -7,17 +7,38 @@
 .App .header {
   display: flex;
   align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .App .header .logo {
-  width: 260px;
+  width: 300px;
 }
 .App .header img {
   width: 60px;
 }
 .App .header h1 {
   flex: auto;
-  margin-left: 100px;
-  margin-right: 100px;
+}
+.App .header .wallet {
+  width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 800px) {
+  .App .header .wallet {
+    width: 190px;
+  }
+  .App .header .logo {
+    width: 190px;
+  }
+}
+
+@media (max-width: 500px) {
+  .App .header .wallet {
+    width: 100px;
+  }
+  .App .header .logo {
+    width: 100px;
+  }
 }
