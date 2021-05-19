@@ -44,7 +44,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div style={{ display: 'flex' }}>
       <TezosWallet
         address={wallet?.address}
         balance={wallet?.balance}
