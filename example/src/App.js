@@ -7,6 +7,18 @@ import {
 } from 'tezos-wallet-component'
 import 'tezos-wallet-component/dist/index.css'
 
+const networks = [
+  {
+    label: 'Mainnet',
+    type: 'mainnet'
+  },
+  {
+    label: 'Edonet',
+    type: 'edo2net',
+    testnet: true
+  }
+]
+
 const App = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [wallet, setWallet] = useState(null)
@@ -36,6 +48,7 @@ const App = () => {
           <TezosWallet
             address={wallet?.address}
             balance={wallet?.balance}
+            networks={networks}
             showMenu={showMenu}
             onToggleMenu={() => setShowMenu(!showMenu)}
             onConnectWallet={handleConnectWallet}

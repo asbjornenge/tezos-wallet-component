@@ -86,6 +86,9 @@
   .TezosWallet .connectWalletText {
     display: none;
   }
+  .TezosWalletMenu {
+    width: 150px;
+  }
 }
 @media (max-width: 500px) {
   .TezosWallet .balance, .TezosWallet .spacer {
