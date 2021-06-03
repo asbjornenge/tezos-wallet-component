@@ -19,6 +19,9 @@
 .TezosWallet > div {
   margin-right: 10px;
 }
+.TezosWallet .address {
+  user-select: none;
+}
 .TezosWallet .connectWalletText {
   padding: 5px;
   padding-left: 10px;
