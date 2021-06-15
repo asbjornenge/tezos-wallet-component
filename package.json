@@ -1,6 +1,6 @@
 {
   "name": "tezos-wallet-component",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Tezos Wallet React Component",
   "author": "asbjornenge",
   "license": "MIT",
