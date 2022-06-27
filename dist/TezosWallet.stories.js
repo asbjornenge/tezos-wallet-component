@@ -34,5 +34,8 @@ Default.args = {
     name: 'ithacanet',
     testnet: true
   }],
-  tezidProfile: true
+  tezIDProfile: {
+    name: 'asbjornenge',
+    avatar: 'ipfs://QmUMat94rqkeRW93QMRdZTjEhnjn32ziuYaww4uoaXEugc'
+  }
 };

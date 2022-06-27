@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 import { create as createIdentityImage } from 'identity-img'
 import formatNumber from 'format-number'
