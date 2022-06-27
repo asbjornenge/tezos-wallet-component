@@ -73,7 +73,7 @@ hideBalance     - Boolean to indicate if you want to hide balance (this might cu
 hideSpacer      - Boolean to indicate if you want to hide spacer between balance and identity image (this might currently screw up media query layouts)
 hideIdImage     - Boolean to indicate if you want to hide identity image (this might currently screw up media query layouts)
 hideAddress     - Boolean to indicate if you want to hide address (this might currently screw up media query layouts)
-tezidProfile    - Boolean to indicate if you want to use TezID profile information
+tezIDProfile    - Object - TezID profile information from TezID Avatar API
 ```
 
 ![screenshot1](screenshots/NotConnected.png?raw=true "Screenshot1")  
