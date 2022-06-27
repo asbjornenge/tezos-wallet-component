@@ -118,7 +118,7 @@ var TezosWalletMenuDisconnect = function TezosWalletMenuDisconnect(props) {
 exports.TezosWalletMenuDisconnect = TezosWalletMenuDisconnect;
 
 var TezosWallet = function TezosWallet(props) {
-  var _props$tezIDProfile, _props$tezIDProfile3, _props$tezIDProfile4;
+  var _props$tezIDProfile4, _props$tezIDProfile5;
 
   var stopPropagation = function stopPropagation(e) {
     e.stopPropagation();
@@ -165,21 +165,25 @@ var TezosWallet = function TezosWallet(props) {
   var idimg = null;
   var idimgStyle = null;
 
-  if (!props.tezIDProfile && props.address != null) {
-    idimg = new Image();
-    idimg.src = (0, _identityImg.create)(props.address);
-  }
+  if (!props.hideIdImage) {
+    var _props$tezIDProfile, _props$tezIDProfile2;
 
-  if (props.tezIDProfile && props !== null && props !== void 0 && (_props$tezIDProfile = props.tezIDProfile) !== null && _props$tezIDProfile !== void 0 && _props$tezIDProfile.avatar) {
-    var _props$tezIDProfile2;
+    if (!(props !== null && props !== void 0 && (_props$tezIDProfile = props.tezIDProfile) !== null && _props$tezIDProfile !== void 0 && _props$tezIDProfile.avatar) && props.address != null) {
+      idimg = new Image();
+      idimg.src = (0, _identityImg.create)(props.address);
+    }
 
-    idimgStyle = {
-      backgroundImage: "url(".concat(getIpfsLink(props === null || props === void 0 ? void 0 : (_props$tezIDProfile2 = props.tezIDProfile) === null || _props$tezIDProfile2 === void 0 ? void 0 : _props$tezIDProfile2.avatar), ")")
-    };
+    if (props !== null && props !== void 0 && (_props$tezIDProfile2 = props.tezIDProfile) !== null && _props$tezIDProfile2 !== void 0 && _props$tezIDProfile2.avatar) {
+      var _props$tezIDProfile3;
+
+      idimgStyle = {
+        backgroundImage: "url(".concat(getIpfsLink(props === null || props === void 0 ? void 0 : (_props$tezIDProfile3 = props.tezIDProfile) === null || _props$tezIDProfile3 === void 0 ? void 0 : _props$tezIDProfile3.avatar), ")")
+      };
+    }
   }
 
   var walletName = props === null || props === void 0 ? void 0 : props.address;
-  if (props.tezIDProfile && props !== null && props !== void 0 && (_props$tezIDProfile3 = props.tezIDProfile) !== null && _props$tezIDProfile3 !== void 0 && _props$tezIDProfile3.name) walletName = props === null || props === void 0 ? void 0 : (_props$tezIDProfile4 = props.tezIDProfile) === null || _props$tezIDProfile4 === void 0 ? void 0 : _props$tezIDProfile4.name;
+  if (props !== null && props !== void 0 && (_props$tezIDProfile4 = props.tezIDProfile) !== null && _props$tezIDProfile4 !== void 0 && _props$tezIDProfile4.name) walletName = props === null || props === void 0 ? void 0 : (_props$tezIDProfile5 = props.tezIDProfile) === null || _props$tezIDProfile5 === void 0 ? void 0 : _props$tezIDProfile5.name;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "TezosWallet ".concat(props.showMenu ? 'withmenu' : ''),
     onClick: props.onToggleMenu
