@@ -79,7 +79,7 @@ export const TezosWallet = (props) => {
     }
   }
   let walletName = props?.address
-  if (props.tezIDProfile && props?.tezIDProfile?.name)
+  if (props?.tezIDProfile?.name)
     walletName = props?.tezIDProfile?.name
 
   return (
