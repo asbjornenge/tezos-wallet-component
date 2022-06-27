@@ -69,12 +69,14 @@ export const TezosWallet = (props) => {
 
   let idimg = null
   let idimgStyle = null
-  if (!props.tezIDProfile && props.address != null) {
-    idimg = new Image()
-    idimg.src = createIdentityImage(props.address)
-  }
-  if (props.tezIDProfile && props?.tezIDProfile?.avatar ) {
-    idimgStyle = { backgroundImage: `url(${getIpfsLink(props?.tezIDProfile?.avatar)})` }
+  if (!props.hideIdImage) {
+    if (!props?.tezIDProfile?.avatar && props.address != null) {
+      idimg = new Image()
+      idimg.src = createIdentityImage(props.address)
+    }
+    if (props?.tezIDProfile?.avatar) {
+      idimgStyle = { backgroundImage: `url(${getIpfsLink(props?.tezIDProfile?.avatar)})` }
+    }
   }
   let walletName = props?.address
   if (props.tezIDProfile && props?.tezIDProfile?.name)
