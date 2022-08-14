@@ -22,7 +22,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function getIpfsLink(ipfsPath) {
-  var base = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'https://ipfs.infura.io/ipfs';
+  var base = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'https://gateway.ipfs.io/ipfs';
   return "".concat(base, "/").concat(ipfsPath === null || ipfsPath === void 0 ? void 0 : ipfsPath.split('ipfs://')[1]);
 }
 
@@ -127,6 +127,7 @@ var TezosWallet = function TezosWallet(props) {
   var formatBalance = props.formatBalance || (0, _formatNumber.default)({
     round: 2
   });
+  var ipfsBase = props.ipfsBase || 'https://gateway.ipfs.io/ipfs';
 
   if (!props.address) {
     var networkMenuItems = (props.networks || []).map(function (n) {
@@ -177,7 +178,7 @@ var TezosWallet = function TezosWallet(props) {
       var _props$tezIDProfile3;
 
       idimgStyle = {
-        backgroundImage: "url(".concat(getIpfsLink(props === null || props === void 0 ? void 0 : (_props$tezIDProfile3 = props.tezIDProfile) === null || _props$tezIDProfile3 === void 0 ? void 0 : _props$tezIDProfile3.avatar), ")")
+        backgroundImage: "url(".concat(getIpfsLink(props === null || props === void 0 ? void 0 : (_props$tezIDProfile3 = props.tezIDProfile) === null || _props$tezIDProfile3 === void 0 ? void 0 : _props$tezIDProfile3.avatar, ipfsBase), ")")
       };
     }
   }
