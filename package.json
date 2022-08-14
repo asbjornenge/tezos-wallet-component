@@ -1,7 +1,7 @@
 {
   "name": "tezos-wallet-component",
   "main": "dist/index.js",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "private": false,
   "files": [
     "dist",
