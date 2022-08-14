@@ -73,6 +73,7 @@ hideBalance     - Boolean to indicate if you want to hide balance (this might cu
 hideSpacer      - Boolean to indicate if you want to hide spacer between balance and identity image (this might currently screw up media query layouts)
 hideIdImage     - Boolean to indicate if you want to hide identity image (this might currently screw up media query layouts)
 hideAddress     - Boolean to indicate if you want to hide address (this might currently screw up media query layouts)
+ipfsBase        - Base URL to get ipfs content (used for TezID profile image) - default https://gateway.ipfs.io/ipfs
 tezIDProfile    - Object - TezID profile information from TezID Avatar API
 ```
 

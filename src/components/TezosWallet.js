@@ -4,7 +4,7 @@ import { create as createIdentityImage } from 'identity-img'
 import formatNumber from 'format-number'
 import './TezosWallet.css'
 
-export function getIpfsLink(ipfsPath, base='https://ipfs.infura.io/ipfs') {
+export function getIpfsLink(ipfsPath, base='https://gateway.ipfs.io/ipfs') {
   return `${base}/${ipfsPath?.split('ipfs://')[1]}`
 }
 
@@ -37,6 +37,7 @@ export const TezosWallet = (props) => {
     e.stopPropagation()
   }
   const formatBalance = props.formatBalance || formatNumber({ round: 2})
+  const ipfsBase = props.ipfsBase || 'https://gateway.ipfs.io/ipfs'
 
   if (!props.address) {
     const networkMenuItems = (props.networks || []).map(n => {
@@ -75,7 +76,7 @@ export const TezosWallet = (props) => {
       idimg.src = createIdentityImage(props.address)
     }
     if (props?.tezIDProfile?.avatar) {
-      idimgStyle = { backgroundImage: `url(${getIpfsLink(props?.tezIDProfile?.avatar)})` }
+      idimgStyle = { backgroundImage: `url(${getIpfsLink(props?.tezIDProfile?.avatar, ipfsBase)})` }
     }
   }
   let walletName = props?.address

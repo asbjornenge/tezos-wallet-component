@@ -26,6 +26,7 @@ Default.args = {
     { name: 'mainnet' },
     { name: 'ithacanet', testnet: true }
   ], 
+  ipfsBase: 'https://gateway.ipfs.io/ipfs',
   tezIDProfile: {
     name: 'asbjornenge',
     avatar: 'ipfs://QmUMat94rqkeRW93QMRdZTjEhnjn32ziuYaww4uoaXEugc'
